@@ -28,6 +28,7 @@ import { Push } from '@/push';
 import type { APIRequest } from '@/requests';
 import * as ResponseHelper from '@/response-helper';
 import type { FrontendService } from '@/services/frontend.service';
+import { personalProjectMiddleware } from '@/middlewares/personal-project.middleware';
 
 import '@/controllers/active-workflows.controller';
 import '@/controllers/annotation-tags.controller.ee';
@@ -196,6 +197,13 @@ export class Server extends AbstractServer {
 			req.browserId = req.headers['browser-id'] as string;
 			next();
 		});
+
+		// Add personal project middleware for development
+		if (process.env.NODE_ENV === 'development') {
+			this.app.get('/rest/projects/personal', (req, res, next) => {
+				personalProjectMiddleware(req, res, next);
+			});
+		}
 
 		// Parse cookies for easier access
 		this.app.use(cookieParser());

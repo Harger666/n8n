@@ -54,6 +54,28 @@ export async function initializeAuthenticatedFeatures(
 	}
 
 	const usersStore = useUsersStore();
+
+	// Create a mock user for development purposes
+	if (process.env.NODE_ENV !== 'production' && !usersStore.currentUser) {
+		const mockUser = {
+			id: '1',
+			email: 'admin@localhost',
+			firstName: 'Admin',
+			lastName: 'User',
+			role: 'global:owner',
+			password: '',
+			disabled: false,
+			mfaEnabled: false,
+			mfaSecret: null,
+			isDefaultUser: false,
+			isPendingUser: false,
+			fullName: 'Admin User',
+		} as any;
+
+		usersStore.addUsers([mockUser]);
+		usersStore.setCurrentUser(mockUser);
+	}
+
 	if (!usersStore.currentUser) {
 		return;
 	}

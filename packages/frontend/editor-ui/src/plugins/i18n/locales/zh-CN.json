@@ -1,0 +1,51 @@
+{
+	"_reusableBaseText": {
+		"cancel": "取消",
+		"codeNodeEditor": {
+			"linter": {
+				"useJson": "访问项目的属性在 `.json` 下，例如 `item.json`"
+			},
+			"completer": {
+				"all": "返回节点输出项的数组",
+				"first": "返回节点输出的第一个项目",
+				"last": "返回节点输出的最后一个项目",
+				"itemMatching": "返回匹配的项目，即用于生成当前节点中指定索引处项目的项目。"
+			}
+		},
+		"name": "名称",
+		"save": "保存",
+		"dismiss": "关闭",
+		"unlimited": "无限",
+		"activate": "激活",
+		"error": "错误"
+	},
+	"_reusableDynamicText": {
+		"readMore": "阅读更多",
+		"learnMore": "了解更多",
+		"moreInfo": "更多信息",
+		"oauth2": {
+			"clientId": "客户端ID",
+			"clientSecret": "客户端密钥"
+		}
+	},
+	"generic.annotations": "注释",
+	"generic.annotationData": "高亮数据显示",
+	"generic.any": "任意",
+	"generic.cancel": "取消",
+	"generic.open": "打开",
+	"generic.close": "关闭",
+	"generic.confirm": "确认",
+	"generic.create": "创建",
+	"generic.create.workflow": "创建工作流",
+	"generic.deleteWorkflowError": "删除工作流时出现问题",
+	"generic.archiveWorkflowError": "归档工作流时出现问题",
+	"generic.unarchiveWorkflowError": "取消归档工作流时出现问题",
+	"generic.filtersApplied": "当前已应用筛选器。",
+	"generic.field": "字段",
+	"generic.fields": "字段",
+	"generic.folderCount": "文件夹 | {count} 个文件夹 | {count} 个文件夹",
+	"generic.folder": "文件夹",
+	"generic.learnMore": "了解更多",
+	"generic.reset": "重置",
+	"generic.resetAllFilters": "重置所有筛选器"
+}

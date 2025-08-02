@@ -67,6 +67,26 @@ export class AuthService {
 	}
 
 	async authMiddleware(req: AuthenticatedRequest, res: Response, next: NextFunction) {
+		// For local development, bypass authentication
+		if (process.env.NODE_ENV !== 'production') {
+			// Create a mock user for development
+			const mockUser = {
+				id: '1',
+				email: 'admin@localhost',
+				firstName: 'Admin',
+				lastName: 'User',
+				role: 'global:owner',
+				password: '',
+				disabled: false,
+				mfaEnabled: false,
+				mfaSecret: null,
+			} as any;
+
+			req.user = mockUser;
+			next();
+			return;
+		}
+
 		const token = req.cookies[AUTH_COOKIE_NAME];
 		if (token) {
 			try {

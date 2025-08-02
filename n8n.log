@@ -1,0 +1,13 @@
+
+> n8n-monorepo@1.95.0 start
+> run-script-os
+
+
+> n8n-monorepo@1.95.0 start:default
+> cd packages/cli/bin && ./n8n
+
+Permissions 0644 for n8n settings file /Users/harger/.n8n/config are too wide. This is ignored for now, but in the future n8n will attempt to change the permissions automatically. To automatically enforce correct permissions now set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true (recommended), or turn this check off set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.
+User settings loaded from: /Users/harger/.n8n/config
+Initializing n8n process
+Error tracking disabled because this release is older than 6 weeks.
+n8n's port 5678 is already in use. Do you have another instance of n8n running already?
